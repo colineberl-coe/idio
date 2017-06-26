@@ -1,0 +1,11 @@
+[user]
+    name = colineberl-coe
+    email = ceberlcoe@sovrn.com
+[alias]
+    st = status
+    ci = commit
+    co = checkout
+    hist = log --pretty=format: '%h %ad | %s%d [%an]' --graph --date=short
+[core]
+    excludesfile = ~/.gitignore_global
+    editor = vim
