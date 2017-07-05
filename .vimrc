@@ -112,6 +112,17 @@ endif
 " Start scrolling three lines before the horizontal window border
 set scrolloff=3
 
+set wmh=0 " set stacked height to 0 by default
+" fast resizing of windows
+map <leader>= <C-W>=
+map <leader>- <C-W>_
+
+" resize with arrow keys
+nmap <left>  :3wincmd <<cr>
+nmap <right> :3wincmd ><cr>
+nmap <up>    :3wincmd +<cr>
+nmap <down>  :3wincmd -<cr>
+
 " Strip trailing whitespace (,ss)
 function! StripWhitespace()
 	let save_cursor = getpos(".")
@@ -152,7 +163,6 @@ nnoremap <silent> <expr> k ScreenMovement("k")
 nnoremap <silent> <expr> 0 ScreenMovement("0")
 nnoremap <silent> <expr> ^ ScreenMovement("^")
 nnoremap <silent> <expr> $ ScreenMovement("$"
-
 
 " UltiSnips
 let &runtimepath .= ','.expand('~/Desktop/idio')
